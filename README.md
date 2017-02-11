@@ -1,28 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##users (deviseで生成)
+|column|data type|    keys   |
+|:----:|:-------:|:---------:|
+|name  |string   |null: false|
+|email |string   |null: false, unique: true|
+|password|string |null: false|
 
-Things you may want to cover:
+##noteFolders
+|column|data type|    keys   |
+|:----:|:-------:|:---------:|
+|name|string|null: false|
+|user_id|integer|foreign_key: true|
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+##notes
+|column|data type|    keys   |
+|:----:|:-------:|:---------:|
+|title|string|add_index|
+|body|text|add_index|
+|noteFolder_id|string|foreign_key: true|
 
 
+#アソシエーション設計
 
+##users
+has_many :noteFolders
 
-* ...
+##noteFolders
+belongs_to :user  
+has_many :notes
+
+##notes
+belongs_to :noteFolders  
