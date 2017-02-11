@@ -24,11 +24,11 @@
 #アソシエーション設計
 
 ##users
-has_many :noteFolders
+has_many :note_folders
 
 ##noteFolders
 belongs_to :user  
 has_many :notes
 
 ##notes
-belongs_to :noteFolders  
+belongs_to :note_folders  
