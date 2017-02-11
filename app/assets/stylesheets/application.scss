@@ -1,3 +1,10 @@
+@import "./base/reset";
+@import "./misc/functions";
+@import "./base/base";
+
+// notes#index
+@import "./notes/notes";
+@import "./notes/content";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
