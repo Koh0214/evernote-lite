@@ -1,0 +1,2 @@
+class NoteFolder < ApplicationRecord
+end
