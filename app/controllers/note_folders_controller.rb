@@ -1,0 +1,2 @@
+class NoteFoldersController < ApplicationController
+end
