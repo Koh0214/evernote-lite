@@ -1,0 +1,25 @@
+.note-folder-index{
+  background-color: #F3F3F3;
+  min-height: 100%;
+  width: 100%;
+  @include flex-column-center;
+  .top-bar{
+    background-color: #2DBE60;
+    height: 4px;
+    width: 100%;
+  }
+  &__top{
+    @include flex-column-center;
+    width: 380px;
+    .multiple-folders__logo{
+      margin-top: 60px;
+      margin-bottom: 15px;
+    }
+  }
+  &__body{
+    width: 760px;
+    min-height: 380px;
+    background-color: white;
+  }
+
+}
