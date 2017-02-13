@@ -5,3 +5,9 @@
   display: -o-flex;
   display: flex;
 }
+
+@mixin flex-column-center {
+  @include flexInitialize;
+  flex-direction: column;
+  align-items: center;
+}

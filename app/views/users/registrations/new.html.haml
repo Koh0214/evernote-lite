@@ -1,22 +1,33 @@
-%h2 Sign up
-newwwwwwwwwwwwwwwwwwwwwwww
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .actions
-    = f.submit "Sign up"
-= render "users/shared/links"
+.sign-up__wrapper
+  .top-bar
+
+  .sign-up__top
+    %img{class: "evernote-lite__logo", :alt => "evernote-lite", :border => "0", :height => "68", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-production/uploads/message/image/21/001.gif", :width => "68"}/
+    %h1 アカウント作成
+  .sign-up__form
+
+  .sign-up__bottom
+    = render "users/shared/links"
+
+
+-# %h1 アカウントを作成
+-# newwwwwwwwwwwwwwwwwwwwwwww
+-# = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+-#   = devise_error_messages!
+-#   .field
+-#     = f.label :email
+-#     %br/
+-#     = f.email_field :email, autofocus: true
+-#   .field
+-#     = f.label :password
+-#     - if @minimum_password_length
+-#       %em
+-#         (#{@minimum_password_length} characters minimum)
+-#     %br/
+-#     = f.password_field :password, autocomplete: "off"
+-#   .field
+-#     = f.label :password_confirmation
+-#     %br/
+-#     = f.password_field :password_confirmation, autocomplete: "off"
+-#   .actions
+-#     = f.submit "Sign up"
