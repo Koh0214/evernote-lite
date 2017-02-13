@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213111112) do
+ActiveRecord::Schema.define(version: 20170213143818) do
 
   create_table "note_folders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -21,13 +21,12 @@ ActiveRecord::Schema.define(version: 20170213111112) do
   end
 
   create_table "notes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "title"
     t.text     "body",           limit: 65535
     t.integer  "note_folder_id"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.integer  "user_id"
-    t.index ["title"], name: "index_notes_on_title", using: :btree
+    t.text     "title",          limit: 65535
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
