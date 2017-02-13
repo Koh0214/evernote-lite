@@ -20,13 +20,18 @@
   }
   &__body{
     width: 760px;
-    min-height: 380px;
+    height: 380px;
     background-color: white;
     padding-top: 15px;
     border-radius: 40px;
-    @include flex-row-center;
+    @include flex-row-wrap-space-around;
     &__content{
+      padding: 0 40px;
+    }
+    &__last-content{
+      @include flex-column-center;
+      .last-content__logo{
+      }
     }
   }
-
 }

@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-@mixin flex-row-center {
+@mixin flex-row-wrap-space-around {
   @include flexInitialize;
   flex-flow: row wrap;
   justify-content: space-around;
