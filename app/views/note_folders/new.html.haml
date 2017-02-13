@@ -2,7 +2,7 @@
   .top-bar
 
   .registration__top
-    %img{class: "evernote-lite__logo", :alt => "evernote-lite", :border => "0", :height => "68", :src => "https://chat-space-demo.herokuapp.com/uploads/message/image/22552/add-folder-icon-23835.png", :width => "68"}/
+    %img{class: "evernote-lite__logo", :alt => "evernote-lite", :border => "0", :height => "68", :src => "https://chat-space-demo.herokuapp.com/uploads/message/image/22572/179474.png", :width => "68"}/
     %h1 フォルダの作成
   .registration__form
     = form_for @note_folder do |f|
@@ -10,4 +10,3 @@
         = f.text_field :name, autofocus: true, placeholder: 'フォルダ名', class: 'registration__form__field'
       .button
         = f.submit "フォルダを作成", class: 'registration__form__button'
-    

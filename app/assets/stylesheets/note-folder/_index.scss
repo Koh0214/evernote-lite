@@ -1,0 +1,37 @@
+.note-folder-index{
+  background-color: #F3F3F3;
+  min-height: 100%;
+  width: 100%;
+  @include flex-column-center;
+  .top-bar{
+    background-color: #2DBE60;
+    height: 4px;
+    width: 100%;
+  }
+  &__top{
+    width: 380px;
+    @include flex-column-center;
+    .multiple-folders__logo{
+      margin-top: 60px;
+      margin-bottom: 15px;
+      height: 68px;
+      width: auto;
+    }
+  }
+  &__body{
+    width: 760px;
+    height: 380px;
+    background-color: white;
+    padding-top: 15px;
+    border-radius: 40px;
+    @include flex-row-wrap-space-around;
+    &__content{
+      padding: 0 40px;
+    }
+    &__last-content{
+      @include flex-column-center;
+      .last-content__logo{
+      }
+    }
+  }
+}

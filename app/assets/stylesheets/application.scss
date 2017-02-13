@@ -4,8 +4,11 @@
 @import "./misc/flash_messages";
 
 // notes#index
-@import "./notes/notes";
-@import "./notes/content";
+@import "./note/notes";
+@import "./note/content";
+
+// note_folders#index
+@import "./note-folder/index";
 
 // sign-up
 @import "./sign-up/base";

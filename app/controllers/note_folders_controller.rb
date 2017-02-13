@@ -1,6 +1,7 @@
 class NoteFoldersController < ApplicationController
 
   def index
+    @note_folders = current_user.note_folders
   end
 
   def new
@@ -16,7 +17,9 @@ class NoteFoldersController < ApplicationController
     end
   end
 
-
+  def show
+    @note_folder = NoteFolder.find(params[:id])
+  end
 
   private
   def set_params
