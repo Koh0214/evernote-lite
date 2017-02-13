@@ -8,8 +8,12 @@ class NoteFoldersController < ApplicationController
   end
 
   def create
-    @note_folder = NoteFolder.create(set_params)
-    redirect_to :root
+    @note_folder = NoteFolder.new(set_params)
+    if @note_folder.save
+      redirect_to :root
+    else
+      redirect_to new_note_folder_path, alert: 'フォルダの作成に失敗しました'
+    end
   end
 
 
