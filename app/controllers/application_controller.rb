@@ -6,4 +6,11 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
   end
+
+  def set_current_user_info
+    if user_signed_in?
+      name = current_user.name
+      user_id = current_user.id
+    end
+  end
 end
