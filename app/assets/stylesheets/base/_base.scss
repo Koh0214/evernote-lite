@@ -1,17 +1,29 @@
 html{
   height: 100%;
   width: 100%;
-
-
   body{
     height: 100%;
     width: 100%;
-
     .wrapper{
       height: 100%;
       width: 100%;
-
       @include flexInitialize;
     }
   }
+}
+
+h1{
+  font-size: 36px;
+  color: #6a6a6a;
+  margin-bottom: 4px;
+}
+
+input{
+  height: 40px;
+  width: 320px;
+  margin-top: 13px;
+  padding-left: 10px;
+  border-radius: 7px;
+  border: solid 1px;
+  border-color: #c4c4c4;
 }
