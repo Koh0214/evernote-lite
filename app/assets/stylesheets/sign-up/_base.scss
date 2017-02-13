@@ -17,8 +17,8 @@
     }
   }
   .sign-up__form{
-    height: 400px;
     width: 380px;
+    padding: 10px 0 20px 0;
     background-color: white;
     @include flex-column-center;
     &__confirmation-sentence{
