@@ -17,7 +17,9 @@ class NoteFoldersController < ApplicationController
     end
   end
 
-
+  def show
+    @note_folder = NoteFolder.find(params[:id])
+  end
 
   private
   def set_params
