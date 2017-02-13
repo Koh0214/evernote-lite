@@ -5,3 +5,6 @@
   %h1 【 #{current_user.name}さん 】 のフォルダ
   .note-folder-index__body
     = render @note_folders
+    .note-folder-index__body__last-content
+      %img{class: "last-content__logo", :alt => "evernote-lite", :border => "0", :height => "68", :width => "68", :src => "https://chat-space-demo.herokuapp.com/uploads/message/image/22732/179474.png"}/
+      %p 新規フォルダの作成
