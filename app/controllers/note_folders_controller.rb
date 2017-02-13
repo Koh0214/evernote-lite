@@ -1,6 +1,7 @@
 class NoteFoldersController < ApplicationController
 
   def index
+    @note_folders = current_user.note_folders
   end
 
   def new
