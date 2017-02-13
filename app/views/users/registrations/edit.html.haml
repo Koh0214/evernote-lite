@@ -1,37 +1,22 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
-edittttttttttttttttttttt
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
-    = f.label :password
-    %i (leave blank if you don't want to change it)
-    %br/
-    = f.password_field :password, autocomplete: "off"
-    - if @minimum_password_length
-      %br/
-      %em
-        = @minimum_password_length
-        characters minimum
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .field
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-    %br/
-    = f.password_field :current_password, autocomplete: "off"
-  .actions
-    = f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-= link_to "Back", :back
+.sign-up__wrapper
+  .top-bar
+
+  .sign-up__top
+    %img{class: "evernote-lite__logo", :alt => "evernote-lite", :border => "0", :height => "68", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-production/uploads/message/image/21/001.gif", :width => "68"}/
+    %h1 アカウント編集
+  .sign-up__form
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      .field
+        = f.text_field :name, autofocus: true, placeholder: '名前', class: 'sign-up__form__field'
+      .field
+        = f.email_field :email, autofocus: true, placeholder: 'メールアドレス', class: 'sign-up__form__field'
+      .field
+        = f.password_field :password, autocomplete: "off", placeholder: '新しいパスワード', class: 'sign-up__form__field'
+      .field
+        = f.password_field :password_confirmation, autocomplete: "off", placeholder: '確認用パスワード', class: 'sign-up__form__field'
+      .field
+        .field-input
+          = f.password_field :current_password, autocomplete: "off", placeholder: '今のパスワードを入力してください'
+      .button
+        = f.submit "アカウントの変更を保存", class: 'sign-up__form__button'
