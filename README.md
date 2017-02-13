@@ -18,7 +18,8 @@
 |:----:|:-------:|:---------:|
 |title|string|add_index|
 |body|text|add_index|
-|noteFolder_id|string|foreign_key: true|
+|noteFolder_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
 
 
 #アソシエーション設計
