@@ -1,6 +1,7 @@
 .note-folder-index
   .top-bar
   .note-folder-index__top
-    %img{class: "multiple-folders__logo", :alt => "evernote-lite", :border => "0", :height => "68", :src => "https://chat-space-demo.herokuapp.com/uploads/message/image/22612/folders1.png", :width => "68"}/
-  %h1 〜 #{current_user.name}さん 〜 のフォルダ
+    %img{class: "multiple-folders__logo", :alt => "evernote-lite", :border => "0", :src => "https://chat-space-demo.herokuapp.com/uploads/message/image/22612/folders1.png"}/
+  %h1 【 #{current_user.name}さん 】 のフォルダ
   .note-folder-index__body
+    = render @note_folders
