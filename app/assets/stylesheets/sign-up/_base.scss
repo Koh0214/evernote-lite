@@ -21,6 +21,10 @@
     width: 380px;
     background-color: white;
     @include flex-column-center;
+    &__confirmation-sentence{
+      margin: 10px 30px;
+      font-size: 12px;
+    }
     &__button{
       color: white;
       background-color: #2DBE60;
