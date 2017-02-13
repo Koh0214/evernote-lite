@@ -5,7 +5,7 @@
     %img{class: "evernote-lite__logo", :alt => "evernote-lite", :border => "0", :height => "68", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-production/uploads/message/image/21/001.gif", :width => "68"}/
     %h1 アカウント編集
   .registration__form
-    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
       = devise_error_messages!
       .field
         = f.text_field :name, autofocus: true, placeholder: '名前', class: 'registration__form__field'
