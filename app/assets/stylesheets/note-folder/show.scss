@@ -1,0 +1,42 @@
+.top-bar{
+  background-color: #2DBE60;
+  height: 4px;
+  width: 100%;
+}
+.notes{
+  &__header{
+    &__header-back-icon{
+    }
+    &__note-folder-name{
+    }
+    &__new-note-icon{
+    }
+  }
+
+  &__search-bar{
+  }
+
+  &__body{
+    height: calc(100% - 100px - 50px);
+    padding: 20px;
+    background-color: #F3F3F3;
+    overflow: scroll;
+    &__box{
+      width: 270px;
+      height: 230px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 7px;
+      box-shadow:5px 5px 10px rgba(0, 0, 0, 0.35);
+      &__title{
+        font-size: 30px;
+        font-weight: bold;
+      }
+      &__line{
+        margin: 5px 10px;
+      }
+      &__body{}
+    }
+  }
+
+}
