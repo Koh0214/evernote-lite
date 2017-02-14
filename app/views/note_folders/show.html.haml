@@ -6,9 +6,4 @@
     .notes__header__new-note-icon
   .notes__search-bar
   .notes__body
-    .notes__body__box
-      .notes__body__box__title
-        = @note.title
-      %hr.notes__body__box__line/
-      .notes__body__box__body
-        = @note.body
+    = render @notes
