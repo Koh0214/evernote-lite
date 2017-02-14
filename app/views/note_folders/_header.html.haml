@@ -1,0 +1,9 @@
+.notes__header
+  = link_to :root do
+    .notes__header__back-icon
+      %img{class: "notes__header__back-icon", :alt => "evernote-lite", :border => "0", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/591/3.png"}/
+  .notes__header__note-folder-name
+    = note_folder.name
+  = link_to new_note_path do
+    .notes__header__new-note-icon
+      %img{class: "notes__header__new-note-icon", :alt => "evernote-lite", :border => "0", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/596/note_plus.png"}/

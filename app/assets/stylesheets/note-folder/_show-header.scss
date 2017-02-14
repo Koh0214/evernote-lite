@@ -1,0 +1,22 @@
+.notes__header{
+  @include flex-row-wrap-space-around;
+  align-items: center;
+  &__back-icon{
+    width: 45px;
+    height: 45px;
+  }
+  &__note-folder-name{
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__new-note-icon{
+    width: 70px;
+    height: 70px;
+  }
+}
