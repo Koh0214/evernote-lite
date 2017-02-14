@@ -5,11 +5,6 @@
 }
 .notes{
   &__body{
-    height: calc(100% - 4px - 110px - 60px - 20px);
-    padding: 5px;
-    margin-bottom: 0;
-    background-color: #F3F3F3;
-    overflow-y: scroll;
     &__box{
       width: 290px;
       height: 100px;

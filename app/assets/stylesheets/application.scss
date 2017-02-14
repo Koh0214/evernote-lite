@@ -3,6 +3,9 @@
 @import "./base/base";
 @import "./misc/flash_messages";
 
+//shared
+@import "./shared/notes-body";
+
 // notes#index
 @import "./note/notes";
 @import "./note/content";
@@ -13,8 +16,6 @@
 // note_folders#show
 @import "./note-folder/show-header";
 @import "./note-folder/show-search-bar";
-@import "./note-folder/show-body";
-
 
 // sign-up
 @import "./sign-up/base";
