@@ -1,0 +1,61 @@
+.top-bar{
+  background-color: #2DBE60;
+  height: 4px;
+  width: 100%;
+}
+.notes{
+  &__header{
+    &__header-back-icon{
+    }
+    &__note-folder-name{
+    }
+    &__new-note-icon{
+    }
+  }
+
+  &__search-bar{
+  }
+
+  &__body{
+    height: calc(100% - 4px - 110px - 60px - 20px);
+    padding: 5px;
+    margin-bottom: 0;
+    background-color: #F3F3F3;
+    overflow-y: scroll;
+    &__box{
+      width: 290px;
+      height: 100px;
+      margin-bottom: 10px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 7px;
+      box-shadow:5px 5px 10px rgba(0, 0, 0, 0.3);
+      &__title{
+        font-size: 16px;
+        font-weight: bold;
+        color: #3e3e3e;
+        padding-left: 10px;
+        // 長い文字列を最後・・・にする
+        width: 270px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &__line{
+        margin: 3px 7px;
+      }
+      &__body{
+        font-size: 15px;
+        color: #565c55;
+        padding: 3px 10px 5px 10px;
+
+        overflow: hidden;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+      }
+    }
+  }
+
+}

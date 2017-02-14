@@ -16,7 +16,7 @@
 ##notes
 |column|data type|    keys   |
 |:----:|:-------:|:---------:|
-|title|string|add_index|
+|title|text|add_index|
 |body|text|add_index|
 |noteFolder_id|integer|foreign_key: true|
 |user_id|integer|foreign_key: true|

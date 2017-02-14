@@ -19,6 +19,7 @@ class NoteFoldersController < ApplicationController
 
   def show
     @note_folder = NoteFolder.find(params[:id])
+    @notes = @note_folder.notes.order("updated_at DESC")
   end
 
   private

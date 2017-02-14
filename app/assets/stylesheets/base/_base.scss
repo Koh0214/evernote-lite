@@ -30,5 +30,16 @@ input{
 
 a{
   height: 0px;
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  height: 0px;
+  color: #bbbbbb;}
 
+hr{
+  border-top-width: 0px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
 }

@@ -1,13 +1,13 @@
 .content{
-  width: calc(100% - 300px);
+  width: calc(100% - 350px);
   height: 100%;
   background-color: blue;
   &__header{
-    height: 100px;
+    height: 70px;
     background-color: white;
   }
   &__body{
-    height: calc(100% - 100px);
+    height: calc(100% - 70px);
     background-color: pink;
   }
 }
