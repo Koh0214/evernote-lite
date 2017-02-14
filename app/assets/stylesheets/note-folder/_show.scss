@@ -23,10 +23,10 @@
     background-color: #F3F3F3;
     overflow-y: scroll;
     &__box{
-      width: 300px;
+      width: 290px;
       height: 100px;
       margin-bottom: 10px;
-      padding: 10px;
+      padding: 15px;
       background-color: #fff;
       border-radius: 7px;
       box-shadow:5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -34,8 +34,9 @@
         font-size: 16px;
         font-weight: bold;
         color: #3e3e3e;
+        padding-left: 10px;
         // 長い文字列を最後・・・にする
-        width: 300px;
+        width: 270px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -46,6 +47,13 @@
       &__body{
         font-size: 15px;
         color: #565c55;
+        padding: 3px 10px 5px 10px;
+
+        overflow: hidden;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
       }
     }
   }
