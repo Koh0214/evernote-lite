@@ -28,6 +28,13 @@
     &__content{
       padding: 0 40px;
     }
+    .note-folder__name{
+      text-align: center;
+      width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     &__last-content{
       @include flex-column-center;
       .last-content__logo{
