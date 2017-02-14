@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :note_folders
+  has_many :notes
 
   validates :name, presence: true #nameはdeviseでvalidationされない。
 end

@@ -2,5 +2,11 @@
 %html
   %body
     .wrapper
-      = render partial: "notes/notes"
+      .notes
+        .notes__header
+          header
+        .notes__search-bar
+          search-bar
+        .notes__body
+          = render @notes
       = render partial: "shared/content"
