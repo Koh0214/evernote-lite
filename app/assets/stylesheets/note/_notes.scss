@@ -1,18 +1,19 @@
 .notes{
-  width: 300px;
+  width: 350px;
   height: 100%;
-  background-color: red;
+  background-color: #F3F3F3;
   &__header{
     height: 100px;
-    background-color: blue;
+    margin: 5px;
+    background-color: white;
   }
   &__search-bar{
-    height: 53px;
-    background-color: red;
+    height: 50px;
+    margin: 5px;
+    background-color: #d9ffda;
   }
   &__body{
-    height: calc(100% - 100px - 53px);
-    width: 300px;
-    background-color: green;
+    height: calc(100% - 100px - 50px);
+    background-color: #F3F3F3;
   }
 }
