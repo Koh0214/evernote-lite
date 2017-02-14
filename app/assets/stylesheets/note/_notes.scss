@@ -7,16 +7,4 @@
     margin: 0 5px 5px 5px;
     background-color: #ecffe0;
   }
-  &__search-bar{
-    height: 40px;
-    margin: 5px;
-    background-color: #b4eea8;
-  }
-  &__body{
-    height: calc(100% - 144px);
-    padding: 5px;
-    margin-bottom: 0;
-    background-color: #F3F3F3;
-    overflow-y: scroll;
-  }
 }
