@@ -4,9 +4,10 @@
 @import "./misc/flash_messages";
 
 //shared
-@import "./shared/notes-body";
-@import "./shared/content-header";
-@import "./shared/content-body";
+@import "./shared/notes__body";
+@import "./shared/notes__search-bar";
+@import "./shared/content__header";
+@import "./shared/content__body";
 
 // notes#index
 @import "./note/notes";
@@ -17,7 +18,6 @@
 
 // note_folders#show
 @import "./note-folder/show-header";
-@import "./note-folder/show-search-bar";
 
 // sign-up
 @import "./sign-up/base";
