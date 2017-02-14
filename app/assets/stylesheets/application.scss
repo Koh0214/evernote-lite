@@ -3,6 +3,12 @@
 @import "./base/base";
 @import "./misc/flash_messages";
 
+//shared
+@import "./shared/notes__body";
+@import "./shared/notes__search-bar";
+@import "./shared/content__header";
+@import "./shared/content__body";
+
 // notes#index
 @import "./note/notes";
 @import "./note/content";
@@ -12,9 +18,6 @@
 
 // note_folders#show
 @import "./note-folder/show-header";
-@import "./note-folder/show-search-bar";
-@import "./note-folder/show-body";
-
 
 // sign-up
 @import "./sign-up/base";
