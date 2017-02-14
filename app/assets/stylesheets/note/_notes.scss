@@ -3,14 +3,14 @@
   height: 100%;
   background-color: #F3F3F3;
   &__header{
-    height: 100px;
+    height: 80px;
     margin: 5px;
-    background-color: white;
+    background-color: #ecffe0;
   }
   &__search-bar{
-    height: 50px;
+    height: 40px;
     margin: 5px;
-    background-color: #d9ffda;
+    background-color: #b4eea8;
   }
   &__body{
     height: calc(100% - 4px - 110px - 60px - 40px);
