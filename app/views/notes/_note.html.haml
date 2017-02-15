@@ -1,9 +1,17 @@
 = link_to note_path(note) do
   .notes__body__box
-    .notes__body__box__title
-      = note.title
+    -if note.title.length === 0
+      .notes__body__box__no-title
+        タイトルがありません
+    -else
+      .notes__body__box__title
+        = note.title
 
     %hr.notes__body__box__line/
 
-    .notes__body__box__body
-      = note.body
+    -if note.body.length === 0
+      .notes__body__box__no-body
+        本文がありません
+    -else
+      .notes__body__box__body
+        = note.body

@@ -21,13 +21,19 @@
       &__title{
         font-size: 17px;
         font-weight: bold;
-        color: #6b6b6b;
+        color: #35b061;
         padding-left: 10px;
         // 長い文字列を最後・・・にする
         width: 270px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+      }
+      &__no-title{
+        font-size: 17px;
+        font-weight: bold;
+        color: #bce4ca;
+        padding-left: 10px;
       }
       &__line{
         margin: 3px 7px;
@@ -42,6 +48,11 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
+      }
+      &__no-body{
+        font-size: 15px;
+        color: #c7c9c5;
+        padding: 3px 10px 5px 10px;
       }
     }
   }
