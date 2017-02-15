@@ -1,4 +1,7 @@
 .content__header{
+  height: 80px;
+  margin-bottom: 5px;
+  background-color: white;
   @include flex-row-wrap-space-around;
   align-items: center;
   &__new-note-icon{
