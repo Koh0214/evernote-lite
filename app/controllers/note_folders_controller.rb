@@ -24,7 +24,9 @@ class NoteFoldersController < ApplicationController
   end
 
   def edit
-    @note_folder = NoteFolder.find(params[:id])
+    @note = Note.find(params[:id])
+    id = @note.note_folder_id
+    @note_folder = NoteFolder.find(id)
   end
 
   def update
