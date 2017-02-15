@@ -17,10 +17,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  &__go-folders-icon{
+    width: 75px;
+    height: auto;
+    margin-top: 10px;
+  }
   &__new-note-icon{
     width: 75px;
     height: auto;
     margin-top: 10px;
-
   }
 }
