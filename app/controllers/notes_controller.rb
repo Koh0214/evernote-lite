@@ -9,4 +9,8 @@ class NotesController < ApplicationController
     @note_folder = NoteFolder.find(@note.note_folder_id)
     @notes = Note.where(note_folder_id: @note.note_folder_id).order("updated_at DESC")
   end
+
+  def destroy
+    redirect_to :root
+  end
 end
