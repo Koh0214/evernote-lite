@@ -20,3 +20,5 @@
           = f.password_field :current_password, autocomplete: "off", placeholder: '今のパスワードを入力してください'
       .button
         = f.submit "アカウントの変更を保存", class: 'registration__form__button'
+  = link_to destroy_user_session_path, method: :delete do
+    .logout-button ログアウト
