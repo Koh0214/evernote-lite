@@ -6,12 +6,12 @@
 //shared
 @import "./shared/notes__body";
 @import "./shared/notes__search-bar";
+@import "./shared/content";
 @import "./shared/content__header";
 @import "./shared/content__body";
 
 // notes#index
 @import "./note/notes";
-@import "./note/content";
 @import "./note/index";
 
 // notes#new
