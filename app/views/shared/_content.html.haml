@@ -6,7 +6,8 @@
       = @note.title
     .content__header__note-move-icons
       %img{class: "note-move-icon", :alt => "evernote-lite", :border => "0", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/599/220983.png"}/
-      %img{class: "note-move-icon", :alt => "evernote-lite", :border => "0", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/597/2.png"}/
+      = link_to note_path(@note), method: :delete do
+        %img{class: "note-delete-icon", :alt => "evernote-lite", :border => "0", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/597/2.png"}/
   .content__body
     .content__body__text
       = @note.body
