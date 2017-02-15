@@ -1,0 +1,12 @@
+.registration__wrapper
+  .top-bar
+
+  .registration__top
+    %img{class: "evernote-lite__logo", :alt => "evernote-lite", :border => "0", :height => "80", :width => "80", :src => "https://cdn-ak.f.st-hatena.com/images/fotolife/k/kochan214/20170215/20170215133950.png"}/
+    %h1 フォルダ名の編集
+  .registration__form
+    = form_for @note_folder do |f|
+      .field
+        = f.text_field :name, autofocus: true, placeholder: '名前', class: 'registration__form__field'
+      .button
+        = f.submit "フォルダ名の変更を保存", class: 'registration__form__button'
