@@ -14,8 +14,8 @@
       .content__header__functions
         B U A a A
       -if @note.title.length === 0
-        .content__header__note-title
-          no title
+        .content__header__no-note-title
+          タイトルがありません
       -else
         .content__header__note-title
           = @note.title
@@ -24,5 +24,9 @@
         = link_to note_path(@note), method: :delete do
           %img{class: "note-delete-icon", :alt => "evernote-lite", :border => "0", :src => "https://cdn-ak.f.st-hatena.com/images/fotolife/k/kochan214/20170215/20170215160512.png"}/
     .content__body
-      .content__body__text
-        = @note.body
+      -if @note.body.length === 0
+        .content__body__no-text
+          本文がありません
+      -else
+        .content__body__text
+          = @note.body
