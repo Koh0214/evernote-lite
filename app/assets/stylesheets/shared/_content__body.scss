@@ -1,4 +1,7 @@
 .content__body{
+  height: calc(100% - 70px);
+  overflow-y: auto;
+  background-color: white;
   // .content__body__title{
   // }
   .content__body__text{
