@@ -8,6 +8,14 @@
     height: 4px;
     width: 100%;
   }
+  &__new-folder-body{
+    position: absolute; right: 60px; top: 60px;
+    .new-folder-icon{
+      width: 80px;
+      height: auto;
+      padding-left: 28px;
+    }
+  }
   &__top{
     width: 380px;
     @include flex-column-center;
@@ -25,12 +33,19 @@
     padding-top: 15px;
     border-radius: 40px;
     @include flex-row-wrap-space-around;
+    overflow: scroll;
     &__content{
       padding: 0 40px;
     }
-    .note-folder__name{
+    &__folder-image{
+      padding-left: 25px;
+    }
+    &__name{
       text-align: center;
-      width: 100px;
+      font-size: 16px;
+      width: 150px;
+      margin-bottom: 20px;
+      text-align: center;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
