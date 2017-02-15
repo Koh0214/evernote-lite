@@ -29,6 +29,12 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
+      &__no-title{
+        font-size: 17px;
+        font-weight: bold;
+        color: #c2bfbf;
+        padding-left: 10px;
+      }
       &__line{
         margin: 3px 7px;
       }
@@ -42,6 +48,11 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
+      }
+      &__no-body{
+        font-size: 15px;
+        color: #c2bfbf;
+        padding: 3px 10px 5px 10px;
       }
     }
   }
