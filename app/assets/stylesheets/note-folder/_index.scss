@@ -28,12 +28,13 @@
   }
   &__body{
     width: 760px;
-    height: 380px;
+    height: 400px;
     background-color: white;
     padding-top: 15px;
     border-radius: 40px;
     @include flex-row-wrap-space-around;
-    overflow: scroll;
+    overflow-y: scroll;
+    border: solid 1px #d6d5d5;
     &__content{
       padding: 0 40px;
     }
