@@ -1,8 +1,11 @@
 .content__header{
   @include flex-row-wrap-space-around;
   align-items: center;
+  &__new-note-icon{
+    margin-left: 12px;
+  }
   &__functions{
-    width: 230px;
+    width: 150px;
     height: 100%;
   }
   &__note-title{
