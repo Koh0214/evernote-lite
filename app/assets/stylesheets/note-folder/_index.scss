@@ -25,6 +25,7 @@
     padding-top: 15px;
     border-radius: 40px;
     @include flex-row-wrap-space-around;
+    overflow: scroll;
     &__content{
       padding: 0 40px;
     }
