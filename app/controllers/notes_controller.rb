@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
   def index
     @note = current_user.notes.last
-    @notes = current_user.notes
+    @notes = current_user.notes.order("updated_at DESC")
   end
 
   def show
@@ -11,6 +11,8 @@ class NotesController < ApplicationController
   end
 
   def destroy
+    @note = Note.find(params[:id])
+    @note.destroy
     redirect_to :root
   end
 end
