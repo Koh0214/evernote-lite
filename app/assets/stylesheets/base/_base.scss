@@ -1,5 +1,6 @@
 html{
-  height: 100%;
+  height: calc(100% - 20px);
+  min-width: 800px;
   width: 100%;
   body{
     height: 100%;
