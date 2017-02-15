@@ -23,6 +23,15 @@ class NoteFoldersController < ApplicationController
     @note = @note_folder.notes.last
   end
 
+  def edit
+    @note_folder = NoteFolder.find(params[:id])
+  end
+
+  def update
+    @note_folder = NoteFolder.find(params[:id]).update(set_params)
+    redirect_to :root
+  end
+
   private
   def set_params
     params.require(:note_folder).permit(:name).merge(user_id: current_user.id)
