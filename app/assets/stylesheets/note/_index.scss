@@ -1,6 +1,6 @@
 .notes{
-  .notes__header{
-    .notes__header__name{
+  &__header{
+    &__name{
       width: 150px;
       font-size: 25px;
       font-weight: bold;
@@ -12,6 +12,11 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+    &__go-folders-icon{
+      height: 75px;
+      width: auto;
+      margin-top: 10px;
     }
 
   }
