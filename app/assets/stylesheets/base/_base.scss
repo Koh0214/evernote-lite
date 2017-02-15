@@ -1,12 +1,21 @@
 html{
-  height: calc(100% - 20px);
+  height: 100%;
   min-width: 800px;
   width: 100%;
+  overflow: hidden;
   body{
     height: 100%;
     width: 100%;
+
+    // remove bounce scroll
+    position: absolute;  /* またはfixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
     .wrapper{
-      height: 100%;
+      height: calc(100% - 20px);
       width: 100%;
       @include flexInitialize;
     }
