@@ -5,6 +5,7 @@
   %h1 【 #{current_user.name}さん 】 のフォルダ
   .note-folder-index__body
     = render @note_folders
-    .note-folder-index__body__last-content
-      %img{class: "last-content__logo", :alt => "evernote-lite", :border => "0", :height => "80", :width => "93", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/595/folder_plus.png"}/
-      %p 新規フォルダの作成
+    = link_to new_note_folder_path do
+      .note-folder-index__body__last-content
+        %img{class: "last-content__logo", :alt => "evernote-lite", :border => "0", :height => "80", :width => "93", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/595/folder_plus.png"}/
+        %p 新規フォルダの作成
