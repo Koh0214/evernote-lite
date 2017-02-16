@@ -1,5 +1,5 @@
 class NoteFoldersController < ApplicationController
-  before_action :set_note_folder, onlt: [:show, :edit]
+  before_action :set_note_folder, only: [:show, :edit]
 
   def index
     @note_folders = current_user.note_folders
