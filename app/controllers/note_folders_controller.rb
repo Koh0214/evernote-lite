@@ -24,14 +24,13 @@ class NoteFoldersController < ApplicationController
   end
 
   def edit
-    @note = Note.find(params[:id])
-    id = @note.note_folder_id
-    @note_folder = NoteFolder.find(id)
+    @note_folder = NoteFolder.find(params[:id])
   end
 
   def update
     @note_folder = NoteFolder.find(params[:id]).update(set_params)
-    redirect_to :root
+    @note_folder = NoteFolder.find(params[:id])
+    redirect_to note_folder_path(@note_folder)
   end
 
   private
