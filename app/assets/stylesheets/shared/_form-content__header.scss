@@ -1,0 +1,35 @@
+.form-content__header{
+  height: 80px;
+  margin: 0 5px 5px;
+  @include flexInitialize;
+  align-items: center;
+  .form-content__header__icon{
+    width: 75px;
+    height: auto;
+    margin: 10px 15px 0;
+  }
+  &__note-title{
+    width: calc(100% - 200px);
+    font-size: 35px;
+    font-weight: bold;
+    color: #3BC26B;
+    text-align: center;
+    @include placeholderColor(#c6c6c6);
+
+    // 長いタイトルを・・・にする
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    background-color: #F3F3F3;
+    border-color: #F3F3F3;
+  }
+  &__note-title:focus{
+    background-color: white;
+    outline: 0px;
+    box-shadow: 0 0 0 4px rgba(138, 242, 74, 0.4);
+  }
+  .delete-note-icon{
+    margin-right: 20px;
+  }
+}

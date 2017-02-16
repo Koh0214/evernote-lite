@@ -5,7 +5,7 @@
 }
 .notes{
   &__body{
-    height: calc(100% - 124px);
+    height: calc(100% - 105px);
     padding: 5px;
     margin-bottom: 0;
     background-color: #F3F3F3;
@@ -34,6 +34,7 @@
         font-weight: bold;
         color: #bce4ca;
         padding-left: 10px;
+        font-weight: lighter;
       }
       &__line{
         margin: 3px 7px;
@@ -53,6 +54,7 @@
         font-size: 15px;
         color: #c7c9c5;
         padding: 3px 10px 5px 10px;
+        font-weight: lighter; 
       }
     }
   }

@@ -35,7 +35,8 @@ class NotesController < ApplicationController
   end
 
   def update
-    if @note = Note.update(set_params)
+    @note = Note.find(params[:id])
+    if @note.update(set_params)
       redirect_to note_folder_path(@note_folder)
     else
       redirect_to new_note_path, alert: 'ノートの作成に失敗しました'

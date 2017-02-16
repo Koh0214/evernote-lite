@@ -1,0 +1,13 @@
+= form_for [@note_folder, @note] do |f|
+  .form-content
+    .form-content__header
+      = link_to new_note_folder_note_path(@note_folder) do
+        %img{class: "form-content__header__icon", :alt => "evernote-lite", :border => "0", :src => "https://cdn-ak.f.st-hatena.com/images/fotolife/k/kochan214/20170215/20170215160111.png"}/
+
+      = f.text_field :title, placeholder: 'タイトルがありません', class: 'form-content__header__note-title'
+
+      = link_to note_folder_note_path(@note_folder, @note), method: :delete do
+        %img{class: "form-content__header__icon delete-note-icon", :alt => "evernote-lite", :border => "0", :src => "https://cdn-ak.f.st-hatena.com/images/fotolife/k/kochan214/20170215/20170215160512.png"}/
+
+    .form-content__body
+      = f.text_area :body, placeholder: '本文がありません', class: 'form-content__body__text'

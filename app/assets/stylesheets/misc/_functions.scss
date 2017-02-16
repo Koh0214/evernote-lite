@@ -17,3 +17,28 @@
   flex-flow: row wrap;
   justify-content: space-around;
 }
+
+@mixin placeholderColor($color) {
+    &:placeholder-shown {
+        color: $color;
+        font-weight: lighter;
+    }
+    &::-webkit-input-placeholder {
+        color:$color;
+        font-weight: lighter;
+    }
+    &:-moz-placeholder {
+        color:$color;
+        opacity: 1;
+        font-weight: lighter;
+    }
+    &::-moz-placeholder {
+        color:$color;
+        opacity: 1;
+        font-weight: lighter;
+    }
+    &:-ms-input-placeholder {
+        color:$color;
+        font-weight: lighter; 
+    }
+}
