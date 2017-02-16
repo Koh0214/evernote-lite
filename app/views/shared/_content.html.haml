@@ -21,7 +21,7 @@
           = @note.title
       .content__header__note-move-icons
         %img{class: "note-move-icon", :alt => "evernote-lite", :border => "0", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/599/220983.png"}/
-        = link_to note_folder_note_path(@note), method: :delete do
+        = link_to note_folder_note_path(@note_folder, @note), method: :delete do
           %img{class: "note-delete-icon", :alt => "evernote-lite", :border => "0", :src => "https://cdn-ak.f.st-hatena.com/images/fotolife/k/kochan214/20170215/20170215160512.png"}/
     .content__body
       -if @note.body.length === 0
