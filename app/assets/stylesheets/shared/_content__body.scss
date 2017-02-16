@@ -4,12 +4,12 @@
   background-color: white;
   // .content__body__title{
   // }
-  .content__body__text{
+  &__text{
     padding: 20px 50px;
     font-size: 18px;
     word-wrap: break-word;
   }
-  .content__body__no-text{
+  &__no-text{
     padding: 20px 50px;
     font-size: 30px;
     word-wrap: break-word;
