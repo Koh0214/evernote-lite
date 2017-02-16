@@ -11,5 +11,5 @@
             .notes__header__name #{current_user.name}
         .notes__search-bar
         .notes__body
-          = render @notes
+          = render partial: "shared/notes", locals: {note_folder: @note_folder, note: @note }
       = render partial: "shared/content"

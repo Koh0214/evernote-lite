@@ -4,5 +4,5 @@
     = render partial: "shared/not-all-note-header", locals: {note_folder: @note_folder}
     .notes__search-bar
     .notes__body
-      = render @notes
+      = render partial: "shared/notes__body", locals: {note_folder: @note_folder, notes: @notes}
   = render partial: "shared/content"
