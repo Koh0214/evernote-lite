@@ -29,6 +29,20 @@ class NotesController < ApplicationController
     redirect_to :root
   end
 
+  def edit
+    @note = Note.find(params[:id])
+  end
+
+  def update
+    if @note = Note.update(set_params)
+      redirect_to :root
+    else
+      redirect_to new_note_path, alert: 'ノートの作成に失敗しました'
+    end
+  end
+
+
+
   private
   def set_params
     params.require(:note).permit(:title, :body).merge(user_id: current_user.id, note_folder_id: 1)
