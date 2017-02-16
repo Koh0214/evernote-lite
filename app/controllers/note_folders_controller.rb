@@ -1,4 +1,5 @@
 class NoteFoldersController < ApplicationController
+  before_action :set_note_folder, only: [:show, :edit]
 
   def index
     @note_folders = current_user.note_folders
@@ -18,24 +19,25 @@ class NoteFoldersController < ApplicationController
   end
 
   def show
-    @note_folder = NoteFolder.find(params[:id])
     @notes = @note_folder.notes.order("updated_at DESC")
     @note = @note_folder.notes.last
   end
 
   def edit
-    @note = Note.find(params[:id])
-    id = @note.note_folder_id
-    @note_folder = NoteFolder.find(id)
   end
 
   def update
     @note_folder = NoteFolder.find(params[:id]).update(set_params)
-    redirect_to :root
+    @note_folder = NoteFolder.find(params[:id])
+    redirect_to note_folder_path(@note_folder)
   end
 
   private
   def set_params
     params.require(:note_folder).permit(:name).merge(user_id: current_user.id)
+  end
+
+  def set_note_folder
+    @note_folder = NoteFolder.find(params[:id])
   end
 end

@@ -1,11 +1,16 @@
 .note-folder-index
   .top-bar
+  = link_to new_note_folder_path do
+    .note-folder-index__new-folder-body
+      %img{class: "new-folder-icon", :alt => "evernote-lite", :border => "0", :height => "", :width => "auto", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/588/%E3%83%95%E3%83%A9%E3%83%83%E3%83%88%E5%B7%A6%E5%8F%B3%E5%88%A5%E3%82%8C.png"}/
+      %p 新規フォルダの作成
+  = link_to edit_user_registration_path do
+    .note-folder-index__user-edit-body
+      %img{class: "user-edit-icon", :alt => "evernote-lite", :border => "0", :height => "", :width => "auto", :src => "https://cdn-ak.f.st-hatena.com/images/fotolife/k/kochan214/20170215/20170215133947.png"}/
+      .user-edit-text ユーザー情報の編集
+
   .note-folder-index__top
     %img{class: "multiple-folders__logo", :alt => "evernote-lite", :border => "0", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/572/folders1.png"}/
   %h1 【 #{current_user.name}さん 】 のフォルダ
   .note-folder-index__body
     = render @note_folders
-  = link_to new_note_folder_path do
-    .note-folder-index__new-folder-body
-      %img{class: "new-folder-icon", :alt => "evernote-lite", :border => "0", :height => "", :width => "auto", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/588/%E3%83%95%E3%83%A9%E3%83%83%E3%83%88%E5%B7%A6%E5%8F%B3%E5%88%A5%E3%82%8C.png"}/
-      %p 新規フォルダの作成

@@ -1,0 +1,17 @@
+-notes.each do |note|
+  = link_to note_folder_note_path(note_folder, note) do
+    .notes__body__box
+      -if note.title.length === 0
+        .notes__body__box__no-title
+          タイトルがありません
+      -else
+        .notes__body__box__title
+          = note.title
+      %hr.notes__body__box__line/
+
+      -if note.body.length === 0
+        .notes__body__box__no-body
+          本文がありません
+      -else
+        .notes__body__box__body
+          = note.body
