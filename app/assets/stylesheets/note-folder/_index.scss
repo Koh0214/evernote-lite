@@ -16,6 +16,18 @@
       padding-left: 28px;
     }
   }
+  &__user-edit-body{
+    position: absolute; left: 60px; top: 60px;
+    .user-edit-icon{
+      width: 80px;
+      height: auto;
+      padding-left: 28px;
+    }
+    .user-edit-text{
+      font-size: 18px;
+      color: #767c78;
+    }
+  }
   &__top{
     width: 380px;
     @include flex-column-center;
@@ -46,6 +58,7 @@
       font-size: 16px;
       width: 150px;
       margin-bottom: 20px;
+      color: #767c78;
       text-align: center;
       white-space: nowrap;
       overflow: hidden;
