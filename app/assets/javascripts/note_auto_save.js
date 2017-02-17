@@ -1,6 +1,6 @@
 $(function(){
-  
-  $('.form-content__header__note-title, .form-content__body__text').mouseout(function() {
+
+  $('.wrapper').on("mouseout", ".form-content__header__note-title", function() {
     var note_id = gon.note_id
     var note_folder_id = gon.note_folder_id
     var formData = new FormData($('.edit_note').get(0))
@@ -14,6 +14,26 @@ $(function(){
     })
     .done(function(data) {
       console.log('mouseout save(title)');
+    })
+    .fail(function(data) {
+      console.log('送信失敗');
+    });
+  });
+
+  $('.wrapper').on("mouseout", ".form-content__body__text", function() {
+    var note_id = gon.note_id
+    var note_folder_id = gon.note_folder_id
+    var formData = new FormData($('.edit_note').get(0))
+    $.ajax({
+      type: 'PUT',
+      url: '/note_folders/' + note_folder_id + '/notes/' + note_id,
+      data: formData,
+      processData: false,
+      contentType: false,
+      dataType: 'json'
+    })
+    .done(function(data) {
+      console.log('mouseout save(body)');
     })
     .fail(function(data) {
       console.log('送信失敗');
