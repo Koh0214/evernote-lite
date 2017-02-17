@@ -1,10 +1,30 @@
 $(function(){
 
-  setInterval(function() {
+  // setInterval(function() {
+  //   var note_id = gon.note_id
+  //   var note_folder_id = gon.note_folder_id
+  //   var formData = new FormData($('.edit_note').get(0))
+  //
+  //   $.ajax({
+  //     type: 'PUT',
+  //     url: '/note_folders/' + note_folder_id + '/notes/' + note_id,
+  //     data: formData,
+  //     processData: false,
+  //     contentType: false,
+  //     dataType: 'json'
+  //   })
+  //   .done(function(data) {
+  //     console.log('saved');
+  //   })
+  //   .fail(function(data) {
+  //     console.log('送信失敗');
+  //   });
+  // },3000);
+
+  $('.form-content__body__text').mouseout(function() {
     var note_id = gon.note_id
     var note_folder_id = gon.note_folder_id
     var formData = new FormData($('.edit_note').get(0))
-
     $.ajax({
       type: 'PUT',
       url: '/note_folders/' + note_folder_id + '/notes/' + note_id,
@@ -14,20 +34,20 @@ $(function(){
       dataType: 'json'
     })
     .done(function(data) {
-      console.log(data);
-      console.log('OKKKKK!');
+      console.log('mouseout save');
     })
     .fail(function(data) {
-      console.log(data);
-      console.log('惜しいよおおおお');
+      console.log('送信失敗');
     });
-  },3000);
+  });
 
-  // ビューのリロード時に出来てしまう12個の空白を削除
+  // ビューのリロード時に出来てしまう空白を削除
   $('.form-content__body__text').ready(function(){
     $('.form-content__body__text').each(function(){
       var txt = $(this).text();
       $(this).text(txt.replace(/            /g,""));
+      $(this).text(txt.replace(/          /g,""));
+      $(this).text(txt.replace(/  /g,""));
     });
   });
 
