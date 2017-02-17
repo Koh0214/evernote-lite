@@ -1,25 +1,25 @@
 $(function(){
 
-  // setInterval(function() {
-  //   var note_id = gon.note_id
-  //   var note_folder_id = gon.note_folder_id
-  //   var formData = new FormData($('.edit_note').get(0))
-  //
-  //   $.ajax({
-  //     type: 'PUT',
-  //     url: '/note_folders/' + note_folder_id + '/notes/' + note_id,
-  //     data: formData,
-  //     processData: false,
-  //     contentType: false,
-  //     dataType: 'json'
-  //   })
-  //   .done(function(data) {
-  //     console.log('saved');
-  //   })
-  //   .fail(function(data) {
-  //     console.log('送信失敗');
-  //   });
-  // },3000);
+  setInterval(function() {
+    var note_id = gon.note_id
+    var note_folder_id = gon.note_folder_id
+    var formData = new FormData($('.edit_note').get(0))
+
+    $.ajax({
+      type: 'PUT',
+      url: '/note_folders/' + note_folder_id + '/notes/' + note_id,
+      data: formData,
+      processData: false,
+      contentType: false,
+      dataType: 'json'
+    })
+    .done(function(data) {
+      console.log('saved');
+    })
+    .fail(function(data) {
+      console.log('送信失敗');
+    });
+  },3000);
 
   $('.form-content__body__text').mouseout(function() {
     var note_id = gon.note_id
