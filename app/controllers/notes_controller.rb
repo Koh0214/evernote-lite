@@ -22,6 +22,9 @@ class NotesController < ApplicationController
   def show
     @note = Note.find(params[:id]) #ここのidはnoteのid
     @notes = Note.where(note_folder_id: params[:note_folder_id]).order("updated_at DESC")
+
+    gon.note_id = @note.id
+    gon.note_folder_id = @note_folder.id
   end
 
   def destroy
@@ -37,7 +40,10 @@ class NotesController < ApplicationController
   def update
     @note = Note.find(params[:id])
     if @note.update(set_params)
-      redirect_to note_folder_path(@note_folder)
+      respond_to do |format|
+        format.html { redirect_to note_folder_path(@note_folder) }
+        format.json { render json: @note }
+      end
     else
       redirect_to new_note_path, alert: 'ノートの作成に失敗しました'
     end
