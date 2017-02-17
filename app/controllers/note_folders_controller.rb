@@ -19,8 +19,13 @@ class NoteFoldersController < ApplicationController
   end
 
   def show
-    @notes = @note_folder.notes.order("updated_at DESC")
     @note = @note_folder.notes.last
+    unless @note.nil?
+      # 最新のノートのshowに飛ばす
+      redirect_to note_folder_note_path(@note_folder, @note)
+    else
+      @notes = @note_folder.notes
+    end
   end
 
   def edit
