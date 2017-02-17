@@ -20,6 +20,8 @@
     width: 380px;
     padding: 10px 0 20px 0;
     background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 0 2.5px rgba(138, 242, 74, 0.4);
     @include flex-column-center;
     &__confirmation-sentence{
       margin: 10px 30px;
@@ -30,6 +32,7 @@
       background-color: #2DBE60;
       border-style: none;
       margin-top: 30px;
+      font-size: 18px;
     }
   }
   .registration__bottom{
