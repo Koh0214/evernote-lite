@@ -1,22 +1,22 @@
 $(function(){
 
-  setInterval(function() {
-    var formData = new FormData($('.edit_note').get(0))
-    $.ajax({
-      type: 'PUT',
-      url: window.location.pathname,
-      data: formData,
-      processData: false,
-      contentType: false,
-      dataType: 'json'
-    })
-    .done(function(data) {
-      console.log('saved');
-    })
-    .fail(function(data) {
-      console.log('送信失敗');
-    });
-  },1000);
+  // setInterval(function() {
+  //   var formData = new FormData($('.edit_note').get(0))
+  //   $.ajax({
+  //     type: 'PUT',
+  //     url: window.location.pathname,
+  //     data: formData,
+  //     processData: false,
+  //     contentType: false,
+  //     dataType: 'json'
+  //   })
+  //   .done(function(data) {
+  //     console.log('saved');
+  //   })
+  //   .fail(function(data) {
+  //     console.log('送信失敗');
+  //   });
+  // },1000);
 
   $('.wrapper').on("mouseout", ".form-content__header__note-title", function() {
     var formData = new FormData($('.edit_note').get(0))
