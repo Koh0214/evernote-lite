@@ -22,9 +22,6 @@ class NotesController < ApplicationController
   def show
     @note = Note.find(params[:id]) #ここのidはnoteのid
     @notes = Note.where(note_folder_id: params[:note_folder_id]).order("updated_at DESC")
-
-    gon.note_id = @note.id
-    gon.note_folder_id = @note_folder.id
   end
 
   def destroy
