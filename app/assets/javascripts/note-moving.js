@@ -4,7 +4,7 @@ $(function(){
     $(this).animate({ backgroundColor: '#ffffff' }, 100, "easeInCubic")
     $(this).animate({ boxShadow: '0 0 30px #5ce050' }, 300, "easeInCubic")
     $(this).animate({ marginLeft: 10 }, 300, "easeInCubic")
-    $(this).animate({ width: 283 }, 100, "easeInCubic")
+    $(this).animate({ width: 285 }, 100, "easeInCubic")
 
     $(this).parent().siblings().children().animate({ backgroundColor: '#e0e3e0' }, 300, "easeInCubic")
     $(this).parent().siblings().children().animate({ marginLeft: 0 }, 400, "easeInCubic")
