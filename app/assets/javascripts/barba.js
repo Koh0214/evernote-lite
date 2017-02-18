@@ -40,6 +40,15 @@ $(function(){
         //.done()をつけることで古いbarba-containerのDOMは削除され、transitionが終了する。
         _this.done();
       });
+
+      // $('.wrapper').on("mouseout", ".form-content__header__note-title", function()
+      // ビューのリロード時に出来てしまう空白を削除
+      $('.form-content__body__text').each(function(){
+        var txt = $(this).text();
+        $(this).text(txt.replace(/            /g,""));
+        $(this).text(txt.replace(/          /g,""));
+        $(this).text(txt.replace(/  /g,""));
+      });
     }
   });
 
