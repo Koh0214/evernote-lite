@@ -1,5 +1,6 @@
 .form-content__header{
   height: 80px;
+  width: calc(100% - 10px);
   margin: 0 5px 5px;
   @include flexInitialize;
   align-items: center;

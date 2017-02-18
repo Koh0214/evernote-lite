@@ -16,7 +16,7 @@ $(function(){
     fadeOut: function() {
       //古いページコンテンツに対して行う処理。
       //ここでは、animateを使って、fadeoutさせている。
-      return $(this.oldContainer).animate({ marginTop: 2000 }, 1200, "easeInCubic").promise();
+      return $(this.oldContainer).animate({ marginLeft: 1200 }, 800, "easeInCubic").promise();
     },
 
     fadeIn: function() {
