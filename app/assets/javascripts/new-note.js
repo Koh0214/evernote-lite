@@ -33,6 +33,7 @@ $(function(){
     .done(function(data) {
       build_form(data)
       $('.form-content__body__text').animate({ height: 500 }, 350, "easeInCubic")
+      history.replaceState('','',data.id);
     })
     .fail(function(data) {
       console.log('惜しい。');
