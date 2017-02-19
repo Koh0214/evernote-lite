@@ -1,7 +1,7 @@
 .top-bar
 .wrapper
   .notes
-    = render partial: "shared/not-all-note-header", locals: {note_folder: @note_folder}
+    = render partial: "shared/notes__header", locals: {note_folder: @note_folder}
     .notes__search-bar
     .notes__body
       = render partial: "shared/notes__body", locals: {note_folder: @note_folder, notes: @notes}
