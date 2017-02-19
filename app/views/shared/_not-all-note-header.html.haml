@@ -1,7 +1,7 @@
 .notes__header
-  = link_to :root do
+  = link_to :root, class: 'no-barba' do
     .notes__header__back-icon
       %img{class: "notes__header__back-icon", :alt => "evernote-lite", :border => "0", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/591/3.png"}/
-  = link_to edit_note_folder_path(@note_folder) do
+  = link_to edit_note_folder_path(@note_folder), class: 'no-barba' do
     .notes__header__note-folder-name
       = @note_folder.name
