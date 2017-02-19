@@ -12,7 +12,12 @@ $(function(){
     )
     .prependTo($('.notes__body'))
     .children().animate({ paddingTop: 15, height: 100, paddingBottom: 15 }, 350, "easeInCubic")
-    .animate({ boxShadow: '0 0 30px #5ce050' }, 300, "easeInCubic");
+    .animate({ boxShadow: '0 0 30px #5ce050' }, 300, "easeInCubic")
+
+    // aタグのデフォルトを禁止することで選択されたノートをクリック禁止にする
+    $(this).click(function(e){
+      e.preventDefault();
+    });
 
     // 新規作成したノートに向かってスクロール
     var targetY = $('.notes__body').offset().top;
