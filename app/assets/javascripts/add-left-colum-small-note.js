@@ -15,7 +15,7 @@ $(function(){
     .animate({ boxShadow: '0 0 30px #5ce050' }, 300, "easeInCubic")
 
     // aタグのデフォルトを禁止することで選択されたノートをクリック禁止にする
-    $(this).click(function(e){
+    .click(function(e){
       e.preventDefault();
     });
 
