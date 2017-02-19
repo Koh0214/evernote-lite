@@ -32,7 +32,7 @@ $(function(){
       console.log('mouseout save(title)');
     })
     .fail(function(data) {
-      console.log('送信失敗');
+      console.log('送信失敗 title');
     });
   });
 
@@ -50,7 +50,7 @@ $(function(){
       console.log('mouseout save(body)');
     })
     .fail(function(data) {
-      console.log('送信失敗');
+      console.log('送信失敗 text');
     });
   });
 

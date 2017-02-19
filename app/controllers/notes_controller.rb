@@ -13,7 +13,10 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(set_params)
     if @note.save
-      redirect_to note_folder_path(@note_folder)
+      respond_to do |format|
+        format.html { redirect_to note_folder_note_path(@note) }
+        format.json { render json: @note  }
+      end
     else
       redirect_to new_note_path, alert: 'ノートの作成に失敗しました'
     end
@@ -55,5 +58,6 @@ class NotesController < ApplicationController
 
   def set_note_folder
     @note_folder = NoteFolder.find(params[:note_folder_id])
+    gon.note_folder_id = @note_folder.id
   end
 end

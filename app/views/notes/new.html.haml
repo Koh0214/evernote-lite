@@ -1,13 +1,1 @@
-.new-note
-  .top-bar
-  .new-note__top
-    %img{class: "evernote-lite__logo", :alt => "evernote-lite", :border => "0", :height => "90", :width => "auto", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/596/note_plus.png"}/
-    %h1 ノートの作成
-  .new-note__form
-    = form_for [@note_folder, @note] do |f|
-      .field
-        = f.text_field :title, autofocus: true, placeholder: 'ノートタイトル', class: 'new-note__form__field'
-      .field
-        = f.text_area :body, autofocus: true, placeholder: '本文', class: 'new-note__form__field new-note__form__body'
-      .button
-        = f.submit "ノートを作成", class: 'new-note__form__button'
+= render partial: "shared/form-content"
