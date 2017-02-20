@@ -18,8 +18,8 @@
 
             = f.text_field :title, placeholder: 'タイトルがありません', class: 'form-content__header__note-title'
 
-            -# = link_to note_folder_note_path(@note_folder, @note), method: :delete do
-            %img{class: "form-content__header__icon delete-note-icon", :alt => "evernote-lite", :border => "0", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/601/removeNoteKai.png"}/
+            = link_to note_folder_path(@note_folder), class: 'no-barba' do
+              %img{class: "form-content__header__icon delete-note-icon", :alt => "evernote-lite", :border => "0", :src => "https://s3-ap-northeast-1.amazonaws.com/chatspace-development/uploads/message/image/601/removeNoteKai.png"}/
 
           .form-content__body
             = f.text_area :body, placeholder: '本文がありません', class: 'form-content__body__text'
