@@ -11,6 +11,7 @@ $(function() {
         isChange = true;
         var changed_title = $('.form-content__header__note-title').val();
         $('.editing').find('.card__title').text(changed_title);
+        $('.editing .notes__body__box__no-title').attr('class','notes__body__box__title card__title');
       }
     }
   }
@@ -24,6 +25,7 @@ $(function() {
         isChange = true;
         var changed_text = $('.form-content__body__text').val();
         $('.editing').find('.card__body').text(changed_text);
+        $('.editing .notes__body__box__no-body').attr('class','notes__body__box__body card__body');
       }
     }
   }
