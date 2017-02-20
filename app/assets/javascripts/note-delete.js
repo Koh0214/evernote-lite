@@ -8,11 +8,5 @@ $(function() {
       contentType: false,
       dataType: 'json'
     })
-    .done(function(data) {
-      console.log('成功 delete');
-    })
-    .fail(function(data) {
-      console.log('送信失敗 delete');
-    });
   });
 })
