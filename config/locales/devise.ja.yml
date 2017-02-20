@@ -63,3 +63,10 @@ ja:
       too_long: "は%{count}文字以下に設定して下さい。"
       invalid: "は有効でありません。"
       confirmation: "が内容とあっていません。"
+  activerecord:
+     attributes:
+          user:
+           name: 名前
+           password: パスワード
+           password_confirmation: パスワード確認
+           email: メールアドレス
