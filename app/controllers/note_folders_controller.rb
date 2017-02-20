@@ -44,5 +44,6 @@ class NoteFoldersController < ApplicationController
 
   def set_note_folder
     @note_folder = NoteFolder.find(params[:id])
+    gon.note_folder_id = @note_folder.id
   end
 end
