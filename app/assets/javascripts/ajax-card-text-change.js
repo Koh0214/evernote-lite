@@ -9,8 +9,8 @@ $(function() {
       if(old != v){
         old = v;
         isChange = true;
-        console.log($('.form-content__header__note-title').val());
-        console.log($('.editing').find('.card__title').text());
+        var changed_title = $('.form-content__header__note-title').val();
+        $('.editing').find('.card__title').text(changed_title);
       }
     }
   }
@@ -22,8 +22,8 @@ $(function() {
       if(old != v){
         old = v;
         isChange = true;
-        console.log($('.form-content__body__text').val());
-        console.log($('.editing').find('.card__body').text());
+        var changed_text = $('.form-content__body__text').val();
+        $('.editing').find('.card__body').text(changed_text);
       }
     }
   }
