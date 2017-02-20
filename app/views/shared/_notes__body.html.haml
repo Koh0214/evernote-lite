@@ -2,16 +2,16 @@
   = link_to note_folder_note_path(note_folder, note) do
     .notes__body__box
       -if note.title.length === 0
-        .notes__body__box__no-title
+        .notes__body__box__no-title.card__title
           タイトルがありません
       -else
-        .notes__body__box__title
+        .notes__body__box__title.card__title
           = note.title
       %hr.notes__body__box__line/
 
       -if note.body.length === 0
-        .notes__body__box__no-body
+        .notes__body__box__no-body.card__body
           本文がありません
       -else
-        .notes__body__box__body
+        .notes__body__box__body.card__body
           = note.body
