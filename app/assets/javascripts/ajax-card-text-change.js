@@ -10,6 +10,7 @@ $(function() {
         old = v;
         isChange = true;
         console.log($('.form-content__header__note-title').val());
+        console.log($('.editing').find('.card__title').text());
       }
     }
   }
@@ -22,6 +23,7 @@ $(function() {
         old = v;
         isChange = true;
         console.log($('.form-content__body__text').val());
+        console.log($('.editing').find('.card__body').text());
       }
     }
   }
