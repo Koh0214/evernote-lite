@@ -20,7 +20,7 @@ class NoteFoldersController < ApplicationController
   end
 
   def show
-    @note = @note_folder.notes.last
+    @note = @note_folder.notes.order("updated_at DESC").first
     unless @note.nil?
       # 最新のノートのshowに飛ばす
       redirect_to note_folder_note_path(@note_folder, @note)
