@@ -1,4 +1,5 @@
 class NoteFoldersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_note_folder, only: [:show, :edit]
 
   def index
