@@ -3,7 +3,7 @@ $(function(){
   function build_form(data) {
     $(
       "<a href='/note_folders/" + data.note_folder_id + "/notes/" + data.id + "'>" +
-        "<div class='notes__body__box ajax-box'>" +
+        "<div class='notes__body__box ajax-box editing'>" +
           "<div class='notes__body__box__no-title'>タイトルがありません</div>" +
           "<hr class='notes__body__box__line'>" +
           "<div class='notes__body__box__no-body'>本文がありません</div>" +
