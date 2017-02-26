@@ -5,10 +5,6 @@ $(function(){
     $(this).animate({ boxShadow: '0 0 30px #5ce050' }, 300, "easeInCubic")
     $(this).addClass('editing')
 
-    // 選択したカードのtitle, bodyを取得
-    var title = $(this).find('.card__title').text();
-    var body = $(this).find('.card__body').text();
-
     // aタグのデフォルトを禁止することで選択されたノートをクリック禁止にする
     $(this).click(function(e){
 			e.preventDefault();
