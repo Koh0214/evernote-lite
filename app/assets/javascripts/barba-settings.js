@@ -41,14 +41,18 @@ $(function(){
         _this.done();
       });
 
-      // $('.wrapper').on("mouseout", ".form-content__header__note-title", function()
-      // ビューのリロード時に出来てしまう空白を削除
-      $('.form-content__body__text').each(function(){
-        var txt = $(this).text();
-        $(this).text(txt.replace(/            /g,""));
-        $(this).text(txt.replace(/          /g,""));
-        $(this).text(txt.replace(/  /g,""));
-      });
+      // 選択したカードのtitle, bodyを取得
+      var title = $('.editing .card__title').text();
+      var body = $('.editing .card__body').text();
+
+      // 先頭に入ってしまうスペースをreplaceしつつ、formの中に埋め込む
+      $('.wrapper .form-content__header__note-title').text(title.replace(/              /g,"").replace(/            /g,""));
+
+      // 本文がありませんの文をform__bodyに入力しない様に設定
+      var if__body = body.replace(/ /g,"").replace(/\r?\n/g,"")
+      if (if__body !== "本文がありません") {
+        $('.wrapper .form-content__body__text').text(body.replace(/\r?\n/,"").replace(/  /g,"").replace(/    /g,"").replace(/              /g,""));
+      }
     }
   });
 
