@@ -45,8 +45,12 @@ $(function(){
       var title = $('.editing .card__title').text();
       var body = $('.editing .card__body').text();
 
+      // 先頭に入ってしまうスペースをreplaceしつつ、formの中に埋め込む
       $('.wrapper .form-content__header__note-title').text(title.replace(/              /g,"").replace(/            /g,""));
-      $('.wrapper .form-content__body__text').text(body.replace(/\r?\n/,"").replace(/  /g,"").replace(/    /g,"").replace(/              /g,""));
+      
+      if (body != "本文がありません") {
+        $('.wrapper .form-content__body__text').text(body.replace(/\r?\n/,"").replace(/  /g,"").replace(/    /g,"").replace(/              /g,""));
+      }
     }
   });
 
