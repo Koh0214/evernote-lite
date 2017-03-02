@@ -48,14 +48,4 @@ $(function(){
     });
   });
 
-  // ビューのリロード時に出来てしまう空白を削除
-  $('.form-content__body__text').ready(function(){
-    $('.form-content__body__text').each(function(){
-      var txt = $(this).text();
-      $(this).text(txt.replace(/            /g,""));
-      $(this).text(txt.replace(/          /g,""));
-      $(this).text(txt.replace(/  /g,""));
-    });
-  });
-
 });
