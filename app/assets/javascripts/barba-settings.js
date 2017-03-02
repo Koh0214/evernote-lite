@@ -1,6 +1,7 @@
 $(function(){
 
   Barba.Pjax.start();
+  Barba.Prefetch.init();
 
   var FadeTransition = Barba.BaseTransition.extend({
     start: function() {
@@ -16,7 +17,7 @@ $(function(){
     fadeOut: function() {
       //古いページコンテンツに対して行う処理。
       //ここでは、animateを使って、fadeoutさせている。
-      return $(this.oldContainer).animate({ marginLeft: 1200 }, 800, "easeInCubic").promise();
+      return $(this.oldContainer).animate({ marginTop: 800 }, 8, "easeInCubic").promise();
     },
 
     fadeIn: function() {
@@ -36,7 +37,7 @@ $(function(){
         opacity : 0
       });
 
-      $el.animate({ opacity: 1 }, 400, function() {
+      $el.animate({ opacity: 1 }, 3, function() {
         //.done()をつけることで古いbarba-containerのDOMは削除され、transitionが終了する。
         _this.done();
       });
