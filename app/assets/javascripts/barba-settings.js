@@ -45,27 +45,8 @@ $(function(){
       var title = $('.editing .card__title').text();
       var body = $('.editing .card__body').text();
 
-      $('.form-content__header__note-title').text(title);
-
-      $('.form-content__body__text').ready(function(){
-        $('.form-content__body__text').text(body)
-        // ビューのリロード時に出来てしまう空白を削除
-        $('.form-content__body__text').each(function(){
-          var txt = $(this).text();
-          $(this).text(txt.replace(/            /g,""));
-          $(this).text(txt.replace(/          /g,""));
-          $(this).text(txt.replace(/  /g,""));
-        });
-      });
-
-      // $('.wrapper').on("mouseout", ".form-content__header__note-title", function()
-      // ビューのリロード時に出来てしまう空白を削除
-      $('.form-content__body__text').each(function(){
-        var txt = $(this).text();
-        $(this).text(txt.replace(/            /g,""));
-        $(this).text(txt.replace(/          /g,""));
-        $(this).text(txt.replace(/  /g,""));
-      });
+      $('.wrapper .form-content__header__note-title').text(title.replace(/              /g,"").replace(/            /g,""));
+      $('.wrapper .form-content__body__text').text(body.replace(/\r?\n/,"").replace(/  /g,"").replace(/    /g,"").replace(/              /g,""));
     }
   });
 
