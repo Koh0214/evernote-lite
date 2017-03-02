@@ -47,8 +47,10 @@ $(function(){
 
       // 先頭に入ってしまうスペースをreplaceしつつ、formの中に埋め込む
       $('.wrapper .form-content__header__note-title').text(title.replace(/              /g,"").replace(/            /g,""));
-      
-      if (body != "本文がありません") {
+
+      // 本文がありませんの文をform__bodyに入力しない様に設定
+      var if__body = body.replace(/ /g,"").replace(/\r?\n/g,"")
+      if (if__body !== "本文がありません") {
         $('.wrapper .form-content__body__text').text(body.replace(/\r?\n/,"").replace(/  /g,"").replace(/    /g,"").replace(/              /g,""));
       }
     }
