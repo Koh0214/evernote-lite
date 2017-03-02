@@ -28,6 +28,7 @@ $(function(){
     // 選択していたノートを非選択状態に戻す
     $('.notes__body__box').animate({ backgroundColor: '#e6ece6' }, 300, "easeInCubic")
     $('.notes__body__box').animate({ boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.3)' }, 400, "easeInCubic")
+    $('.notes__body__box').removeClass('editing')
 
     $.ajax({
       type: 'POST',
