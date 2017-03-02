@@ -17,7 +17,7 @@ $(function(){
     fadeOut: function() {
       //古いページコンテンツに対して行う処理。
       //ここでは、animateを使って、fadeoutさせている。
-      return $(this.oldContainer).animate({ marginTop: 800 }, 8, "easeInCubic").promise();
+      return $(this.oldContainer).animate({ marginTop: 800 }, 1, "easeInCubic").promise();
     },
 
     fadeIn: function() {
@@ -37,7 +37,7 @@ $(function(){
         opacity : 0
       });
 
-      $el.animate({ opacity: 1 }, 3, function() {
+      $el.animate({ opacity: 1 }, 10, function() {
         //.done()をつけることで古いbarba-containerのDOMは削除され、transitionが終了する。
         _this.done();
       });
@@ -47,7 +47,7 @@ $(function(){
       var body = $('.editing .card__body').text();
 
       // 先頭に入ってしまうスペースをreplaceしつつ、formの中に埋め込む
-      $('.wrapper .form-content__header__note-title').text(title.replace(/              /g,"").replace(/            /g,""));
+      $('.wrapper .form-content__header__note-title').val(title.replace(/              /g,"").replace(/            /g,""));
 
       // 本文がありませんの文をform__bodyに入力しない様に設定
       var if__body = body.replace(/ /g,"").replace(/\r?\n/g,"")
