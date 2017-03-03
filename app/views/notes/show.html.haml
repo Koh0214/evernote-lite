@@ -2,7 +2,8 @@
 .wrapper
   .notes
     = render partial: "shared/notes__header", locals: {note_folder: @note_folder}
-    .notes__search-bar
+    = form_for [@note_folder] do |f|
+      = f.text_field :name, placeholder: '検索してください', class: 'notes__search-bar', value: ''
     .notes__body
       = render partial: "shared/notes__body", locals: {note_folder: @note_folder, notes: @notes}
   = render partial: "shared/form-content"
