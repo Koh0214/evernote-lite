@@ -1,6 +1,20 @@
 .notes__search-bar{
-  height: 35px;
-  margin: 5px 20px;
-  background-color: #b4eea8;
+  width: 10px;
+  height: 45px;
+  position: absolute; top: 14px; left: 295px;
+  padding-left: 15px;
+  padding-right: 55px;
+  margin: 5px;
+  font-size: 23px;
+  opacity: 0;
   border-radius: 7px;
+  border-color: white;
+
+  z-index: 0;
+
+  @include placeholderColor(#bbbbbb);
+  &:focus{
+    outline: 0px;
+    box-shadow: 0 0 0 4px rgba(138, 242, 74, 0.8);
+  }
 }
