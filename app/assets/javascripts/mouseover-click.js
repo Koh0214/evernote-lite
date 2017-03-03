@@ -1,7 +1,7 @@
 $(function(){
 
   // notes__bodyの中のaタグをマウスオーバーすると移動するメソッド
-  $('.notes__body__box').on('mouseover', function(){
+  $('.notes__body').on('mouseover', '.notes__body__box', function(){
     $(this)[0].click();
   })
 
