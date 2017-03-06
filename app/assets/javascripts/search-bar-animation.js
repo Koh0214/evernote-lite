@@ -15,4 +15,8 @@ $(function(){
     $(this).removeClass('searching')
     $(this).addClass('not-searching')
   })
+
+  $('.wrapper').on('mouseover', '.notes__search-bar', function(){
+    $(this)[0].focus();
+  })
 })
