@@ -3,7 +3,9 @@ class NotesController < ApplicationController
   before_action :set_note_folder
 
   def index
-    notes = Note.where("title like '%" + params[:text] + "%'").where(note_folder_id: @note_folder.id)
+    notes_title = Note.where("title like '%" + params[:text] + "%'").where(note_folder_id: @note_folder.id)
+    notes_body = Note.where.not(id: notes_title.ids).where("body like '%" + params[:text] + "%'").where(note_folder_id: @note_folder.id)
+    notes = notes_title + notes_body
     respond_to do |format|
       format.html { redirect_to root }
       format.json { render json: notes  }
