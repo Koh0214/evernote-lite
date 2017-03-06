@@ -1,6 +1,6 @@
 $(function(){
 
-  $('.wrapper').on('click', '.not-searching', function(){
+  $('.wrapper').on('click mouseover', '.not-searching', function(){
     $('.notes__search-bar').val('')
     $('.notes__search-bar').animate({ left: 8, top: 10, width: 245, opacity: 1}, 300, "easeInCubic")
     $(this).addClass('searching')
