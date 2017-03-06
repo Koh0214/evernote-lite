@@ -1,10 +1,13 @@
 class NotesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_note_folder, except: [:index]
+  before_action :set_note_folder
 
   def index
-    @note = current_user.notes.last
-    @notes = current_user.notes.order("updated_at DESC")
+    notes = Note.where("title like '%" + params[:text] + "%'").where(note_folder_id: @note_folder.id)
+    respond_to do |format|
+      format.html { redirect_to root }
+      format.json { render json: notes  }
+    end
   end
 
   def new
